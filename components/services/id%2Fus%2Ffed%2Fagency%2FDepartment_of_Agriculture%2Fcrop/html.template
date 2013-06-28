@@ -1,0 +1,11 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>USDA US Crop Instances</h1>
+	<ul>
+    	{% for i in models.crops %}
+	   	 <li><a href="{{i.crop.value}}">{{i.name.value | capfirst}}</a></li>
+		{% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>

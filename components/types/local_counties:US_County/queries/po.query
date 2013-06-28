@@ -1,0 +1,5 @@
+SELECT ?p ?o  WHERE {
+	GRAPH <{{lodspk.counties}}>{
+		<{{uri}}> ?p ?o.
+	}
+}LIMIT {{lodspk.maxResults}}

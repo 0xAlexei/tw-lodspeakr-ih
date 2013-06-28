@@ -1,0 +1,6 @@
+SELECT ?child ?name WHERE {
+	GRAPH <{{lodspk.agencies}}>{
+	  ?child skos:broader <{{uri}}> .
+	  ?child dcterms:title ?name.
+	}
+}LIMIT {{lodspk.maxResults}}

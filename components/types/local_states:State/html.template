@@ -1,0 +1,54 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>{{first.name.name.value}}</h1>
+
+    <table class="table table-striped" about="{{uri}}">
+    <thead>
+      <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
+    </thead>
+    {% for row in models.po %}
+     <tr>
+        <td id="name">{%if forloop.first%}<a href='{{lodspk.this.value}}'>{{first.name.name.value}}</a>{%endif%}</td>
+        <td><a href='{{row.p.value}}'>{{row.p.curie}}</a></td>
+     
+        <td>
+        {%if row.o.uri == 1%}
+        <a rel='{{row.p.value}}' href='{{row.o.value}}'>{{row.o.curie}}</a>
+        {%else%}
+        <span property='{{row.p.value}}'>{{row.o.value}}</span>
+        {%endif%}
+        </td>
+
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <td></td>
+        <td><a href='{{lodspk.ns.foaf}}depiction'>foaf:depiction</a></td>
+        <td><img alt="{{first.name.name.value}} logo" class="logo" src="{{first.dbpedia.logodescription.pic.value}}"/></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href='{{lodspk.ns.dbpediaowl}}abstract'>dbpedia-owl:abstract</a></td>
+        <td>{{first.dbpedia.logodescription.abstract.value}}</td>
+    </tr>
+
+    {% for row in models.subcounties %}
+    <tr>
+        <td><a href='{{row.county.value}}'>{{row.name.value}}</a></td>
+        <td><a rev='{{row.county.value}}' href='{{lodspk.ns.skos}}broader'>skos:broader</a></td>
+        <td>{{first.name.name.value}}</td>
+    </tr>
+    {% endfor %}
+
+
+    <thead>
+      <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
+    </thead>
+
+    </table>
+    </div>    
+    
+  </body>
+</html>

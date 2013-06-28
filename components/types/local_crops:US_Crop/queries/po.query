@@ -1,0 +1,6 @@
+SELECT ?p ?o  WHERE {
+	GRAPH <{{lodspk.crops}}>{
+    	<{{uri}}> ?p ?o .
+    	FILTER (?p != skos:broader).
+    }
+}LIMIT {{lodspk.maxResults}}

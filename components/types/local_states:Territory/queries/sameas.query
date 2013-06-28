@@ -1,0 +1,6 @@
+SELECT ?dbpediaUri WHERE{
+	GRAPH <{{lodspk.states}}>{
+	 <{{uri}}> owl:sameAs ?dbpediaUri .
+	 FILTER regex(?dbpediaUri, ".*dbpedia.*") 
+	 }
+}

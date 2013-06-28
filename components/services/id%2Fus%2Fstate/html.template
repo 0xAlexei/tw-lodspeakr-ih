@@ -1,0 +1,25 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>US States & Territories Instances</h1>
+	<ul>
+  	
+	<li>
+	  	<h2>States</h2>
+	  	<ul>
+	    {% for i in models.states %}
+	    	<li><a href="{{i.state.value}}">{{i.name.value}}</a></li>
+	    {% endfor %}
+	    </ul>
+
+	    <h2>Territories</h2>
+	  	<ul>
+	    {% for i in models.territories %}
+	    	<li><a href="{{i.territory.value}}">{{i.name.value}}</a></li>
+	    {% endfor %}
+	    </ul>
+    </li>
+
+    </ul>
+    </div>
+  </body>
+</html>

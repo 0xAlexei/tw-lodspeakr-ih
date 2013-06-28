@@ -1,0 +1,5 @@
+SELECT ?dbpediaUri WHERE{
+	GRAPH <{{lodspk.agencies}}>{
+	 <{{uri}}> owl:sameAs ?dbpediaUri .
+	}
+}

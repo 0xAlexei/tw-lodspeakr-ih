@@ -1,0 +1,11 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>Country Instances</h1>
+	<ul>
+      {% for i in models.countries %}
+	    <li><a href="{{i.country.value}}">{{i.name.value}}</a></li>
+	  {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>

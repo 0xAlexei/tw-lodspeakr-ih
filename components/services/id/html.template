@@ -1,0 +1,60 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>All Instances</h1>
+	<ul>
+  	
+	<li>
+	  	<h2><a href="{{lodspk.home}}id/country">Countries</a></h2>
+	  	<ul>
+	    {% for i in models.countries %}
+	    	<li><a href="{{i.country.value}}">{{i.name.value}}</a></li>
+	    {% endfor %}
+	    </ul>
+    </li>
+
+    <li> <h2><a href="{{lodspk.home}}id/us">US Instances</a></h2>
+    	<ul>
+    	<li><h2><a href="{{lodspk.home}}id/us/fed">US Federal Agencies</a></h2>
+			<ul>
+			{% for i in models.us_agencies %}
+		   	 <li><a href="{{i.agency.value}}">{{i.name.value}}</a></li>
+			{% endfor %}
+			</ul>
+		</li>
+
+    	<li>
+	  		<h2><a href="{{lodspk.home}}id/us/state">US States</a></h2>
+	  		<ul>
+		    {% for i in models.states %}
+		    	<li><a href="{{i.state.value}}">{{i.name.value}}</a></li>
+		    {% endfor %}
+		    </ul>
+		 </li>
+
+		 <li>
+		    <h2><a href="{{lodspk.home}}id/us/state">US Territories</a></h2>
+		  	<ul>
+		    {% for i in models.territories %}
+		    	<li><a href="{{i.territory.value}}">{{i.name.value}}</a></li>
+		    {% endfor %}
+		    </ul>
+    	</li>
+
+ 	
+
+    	<li>
+		    <h2><a href="{{lodspk.home}}id/us/fed/agency/Department_of_Agriculture/crop/">USDA US Crops</a></h2>
+		  	<ul>
+		    {% for i in models.crops %}
+		    	<li><a href="{{i.crop.value}}">{{i.name.value | capfirst}}</a></li>
+		    {% endfor %}
+		    </ul>
+    	</li>
+
+    	</ul>
+    </li>
+
+    </ul>
+    </div>
+  </body>
+</html>

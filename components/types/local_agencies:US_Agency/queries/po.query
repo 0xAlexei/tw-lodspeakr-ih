@@ -1,0 +1,6 @@
+SELECT ?p ?o  WHERE {
+	GRAPH <{{lodspk.agencies}}>{
+	    <{{uri}}> ?p ?o .
+	    FILTER (?p != skos:broader).
+	}
+}LIMIT {{lodspk.maxResults}}

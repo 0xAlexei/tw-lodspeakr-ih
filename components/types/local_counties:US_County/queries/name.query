@@ -1,0 +1,5 @@
+SELECT ?name WHERE{
+	GRAPH <{{lodspk.counties}}>{
+		<{{uri}}> dcterms:title ?name.
+	}
+}

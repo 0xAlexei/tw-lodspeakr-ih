@@ -1,0 +1,63 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>{{first.name.name.value | capfirst}}</h1>
+
+    <table class="table table-striped" about="{{uri}}">
+    <thead>
+      <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
+    </thead>
+    {% for row in models.po %}
+     <tr>
+        <td id="name">{%if forloop.first%}<a href='{{lodspk.this.value}}'>{{first.name.name.value}}</a>{%endif%}</td>
+        <td><a href='{{row.p.value}}'>{{row.p.curie}}</a></td>
+     
+        <td>
+        {%if row.o.uri == 1%}
+        <a rel='{{row.p.value}}' href='{{row.o.value}}'>{{row.o.curie}}</a>
+        {%else%}
+        <span property='{{row.p.value}}'>{{row.o.value}}</span>
+        {%endif%}
+        </td>
+
+    </tr>
+    {% endfor %}
+
+    {% if first.sameas.dbpediaUri.value %}
+    <tr>
+        <td></td>
+        <td><a href="{{lodspk.ns.owl}}sameAs">owl:sameAs</a></td>
+        <td><a href="{{first.sameas.dbpediaUri.value}}">{{first.sameas.dbpediaUri.value}}</a></td>
+    </tr>
+    {% endif %}
+
+    {% if first.broader.parent.value %}
+    <tr>
+        <td></td>
+        <td><a href="{{lodspk.ns.skos}}broader">skos:broader</a></td>
+        <td><a href="{{first.broader.parent.value}}">{{first.broader.parent_name.value}}</a></td>
+    </tr>
+    {% endif %}
+
+
+    <tr>
+        <td></td>
+        <td><a href='{{lodspk.ns.foaf}}depiction'>foaf:depiction</a></td>
+        <td><img alt="{{first.name.name.value}} logo" class="logo" src="{{first.dbpedia.logodescription.pic.value}}"/></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href='{{lodspk.ns.dbpediaowl}}abstract'>dbpedia-owl:abstract</a></td>
+        <td>{{first.dbpedia.logodescription.abstract.value}}</td>
+    </tr>
+
+
+    <thead>
+      <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
+    </thead>
+
+    </table>
+    </div>    
+    
+  </body>
+</html>

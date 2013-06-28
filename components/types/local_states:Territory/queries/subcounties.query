@@ -1,0 +1,6 @@
+SELECT ?county ?name WHERE {
+	GRAPH <{{lodspk.counties}}>{
+	  ?county skos:broader <{{uri}}>.
+	  ?county dcterms:title ?name.
+	}
+}LIMIT {{lodspk.maxResults}}

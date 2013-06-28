@@ -1,0 +1,6 @@
+SELECT * WHERE{
+	GRAPH <{{lodspk.states}}>{
+		?state a local_states:State .
+		?state dcterms:title ?name .
+	}
+}
