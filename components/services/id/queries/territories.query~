@@ -1,6 +1,0 @@
-SELECT * WHERE{
-	GRAPH <{{lodspk.states}}>{
-		?territory a local_states:Territory .
-		?territory dcterms:title ?name .
-	}
-}
