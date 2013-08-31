@@ -3,4 +3,4 @@ SELECT * WHERE{
 		?crop a local_crops:US_Crop.
 		?crop dcterms:title ?name .
 	}
-} ORDER BY ?name
+}	

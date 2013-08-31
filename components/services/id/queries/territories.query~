@@ -3,4 +3,4 @@ SELECT * WHERE{
 		?territory a local_states:Territory .
 		?territory dcterms:title ?name .
 	}
-} ORDER BY ?name
+}

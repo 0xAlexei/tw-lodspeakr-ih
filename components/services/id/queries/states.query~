@@ -3,4 +3,4 @@ SELECT * WHERE{
 		?state a local_states:State .
 		?state dcterms:title ?name .
 	}
-} ORDER BY ?name
+}

@@ -6,4 +6,4 @@ SELECT * WHERE{
 		?country a local_countries:Country .
 		?country dc:identifier ?name .
 	}
-} ORDER BY ?name
+}
