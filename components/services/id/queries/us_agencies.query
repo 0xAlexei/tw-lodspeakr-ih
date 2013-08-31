@@ -1,6 +1,1 @@
-SELECT * WHERE{
-	GRAPH <{{lodspk.agencies}}>{
-		?agency a local_agencies:US_Agency.
-		?agency dcterms:title ?name .
-	}
-} ORDER BY ?name
+../../service_queries_root/us_agencies.query

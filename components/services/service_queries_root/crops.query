@@ -1,0 +1,6 @@
+SELECT * WHERE{
+	GRAPH <{{lodspk.crops}}>{
+		?crop a local_crops:US_Crop.
+		?crop dcterms:title ?name .
+	}
+} ORDER BY ?name

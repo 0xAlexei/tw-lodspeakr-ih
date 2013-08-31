@@ -1,9 +1,1 @@
-PREFIX local_countries: <http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-countries/vocab/>
-PREFIX dc: <http://purl.org/dc/terms/>
-
-SELECT * WHERE{
-	GRAPH <{{lodspk.countries}}>{
-		?country a local_countries:Country .
-		?country dc:identifier ?name .
-	}
-} ORDER BY ?name
+../../service_queries_root/countries.query
