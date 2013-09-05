@@ -15,7 +15,7 @@ $conf['ns']['local_counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/datas
 //THESE NEED TO BE ABOVE $conf['ns']['local']
 
 $conf['ns']['local']   = 'http://logd.tw.rpi.edu/';
-$conf['ns']['base']   = 'http://logd.tw.rpi.edu/ih2/';
+$conf['ns']['base']   = 'http://logd.tw.rpi.edu/'; //previously http://logd.tw.rpi.edu/ih2, stopped working after google maps update
 
 $conf['mirror_external_uris'] = true; //needs to be true
 
