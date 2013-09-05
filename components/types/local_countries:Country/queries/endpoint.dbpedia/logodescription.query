@@ -1,6 +1,11 @@
 SELECT * WHERE{
  	<{{first.sameas.dbpediaUri.value}}>	foaf:depiction ?pic ;
- 	dbpedia-owl:abstract ?abstract ;
+ 	dbpedia-owl:abstract ?abstract;
+	dbpprop:commonName	?name;
+
+	<http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?la;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?lo ;
+
 	owl:sameAs ?link .
 	FILTER( lang(?abstract) = "en" )  
-}
+} LIMIT 1

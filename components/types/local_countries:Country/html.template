@@ -40,6 +40,12 @@
     </thead>
 
     </table>
+    
+    <h2>Location on map:</h2>
+    <div class="span4">
+    	{{models.dbpedia.logodescription|GoogleMaps:"la,lo,name,zoom=3"}}
+    </div>
+          
     </div>    
     
   </body>
