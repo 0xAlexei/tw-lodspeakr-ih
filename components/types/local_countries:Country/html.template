@@ -2,6 +2,16 @@
     <div class="container-fluid">
     <h1>{{first.name.name.value}}</h1>
 
+    {% if first.dbpedia.logodescription.lat.literal %}
+        {% if first.dbpedia.logodescription.long.literal %}
+       <div class="span4">
+         <div id="maptop">{{models.dbpedia.logodescription|GoogleMaps:"lat,long,name,zoom=3,height=250,width=400"}}</div>
+       </div>
+    {%endif%}
+   {%endif%}
+
+    {% if first.dbpedia.logodescription.pic.uri %}<img id="flagtop" alt="{{first.name.name.value}} logo" src="{{first.dbpedia.logodescription.pic.value}}"/>{%endif%}
+
     <table class="table table-striped" about="{{uri}}">
     <thead>
       <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
@@ -39,18 +49,7 @@
       <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
     </thead>
 
-    </table>
-    
-   {% if first.dbpedia.logodescription.lat.literal %}
-        {% if first.dbpedia.logodescription.long.literal %}
-	   <h2>Location on map:</h2>
-	   <div class="span4">
-	     {{models.dbpedia.logodescription|GoogleMaps:"lat,long,name,zoom=3"}}
-	   </div>
-	{%endif%}
-   {%endif%}
-
-						  
+    </table>			  
           
     </div>    
     

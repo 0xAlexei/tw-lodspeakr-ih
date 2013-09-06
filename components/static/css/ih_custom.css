@@ -1,0 +1,19 @@
+.logo{
+	max-height:200px;
+	max-width:200px;
+}
+
+#name{
+	width: 25%;
+}
+
+#maptop{
+	max-width: 50%;
+}
+
+#flagtop{
+	float:right;
+	margin-right: 10%;
+	max-height:250px;
+	max-width:40%;
+}
