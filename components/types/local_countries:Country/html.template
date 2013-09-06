@@ -41,10 +41,16 @@
 
     </table>
     
-    <h2>Location on map:</h2>
-    <div class="span4">
-    	{{models.dbpedia.logodescription|GoogleMaps:"la,lo,name,zoom=3"}}
-    </div>
+   {% if first.dbpedia.logodescription.lat.literal %}
+        {% if first.dbpedia.logodescription.long.literal %}
+	   <h2>Location on map:</h2>
+	   <div class="span4">
+	     {{models.dbpedia.logodescription|GoogleMaps:"lat,long,name,zoom=3"}}
+	   </div>
+	{%endif%}
+   {%endif%}
+
+						  
           
     </div>    
     

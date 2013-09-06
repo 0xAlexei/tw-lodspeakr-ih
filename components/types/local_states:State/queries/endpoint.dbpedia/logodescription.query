@@ -1,6 +1,8 @@
 SELECT * WHERE{
  	<{{first.sameas.dbpediaUri.value}}>	foaf:depiction ?pic ;
 	dbpedia-owl:abstract ?abstract ;
+	geo:lat ?lat;
+	geo:long ?long;
 	owl:sameAs ?link .
 	FILTER( lang(?abstract) = "en" )  
 }
