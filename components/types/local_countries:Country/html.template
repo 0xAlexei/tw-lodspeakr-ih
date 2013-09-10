@@ -55,7 +55,7 @@
         <h2>Selection of <a href="http://logd.tw.rpi.edu/page/international_dataset_catalog_search" title="IOGDS Datasets">IOGDS</a> datasets from this nation</h2>
         <ul>
         {% for row in models.datasets %}
-            <li><a href="{{row.dataset.value}}">{{row.title.value}}</a></td>
+            <li><a href="{{row.dataset.mirroredUri}}">{{row.title.value}}</a></td>
         {% endfor %}
         </ul>
     {% endif %}
