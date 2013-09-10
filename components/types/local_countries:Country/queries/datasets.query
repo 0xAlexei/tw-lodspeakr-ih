@@ -1,0 +1,19 @@
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX conversion: <http://purl.org/twc/vocab/conversion/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX dgtwc: <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#>
+ 
+SELECT  ?dataset ?title ?catalog 
+WHERE {
+    GRAPH <{{lodspk.countries}}>{
+		<{{uri}}> owl:sameAs ?dbpediaUri .
+	}
+   GRAPH conversion:MetaDataset {
+       ?dataset a conversion:CatalogedDataset;
+                void:inDataset ?versioned ;
+                dcterms:title ?title;
+                dgtwc:catalog_country ?dbpediaUri;
+                dgtwc:catalog_title ?catalog.
+   }
+} LIMIT 100
