@@ -1,0 +1,9 @@
+SELECT  ?dataset ?title ?catalog WHERE {
+   GRAPH conversion:MetaDataset {
+       ?dataset a conversion:CatalogedDataset;
+                void:inDataset ?versioned ;
+                dcterms:title ?title;
+                dgtwc:catalog_country <{{first.sameas.dbpediaUri.value}}>;
+                dgtwc:catalog_title ?catalog.
+   }
+} LIMIT 100

@@ -49,8 +49,16 @@
       <tr><th>Subject</th><th>Predicate</th><th>Object</th></tr>
     </thead>
 
-    </table>			  
-          
+    </table>
+
+
+    <h2>Selection of <a href="http://logd.tw.rpi.edu/page/international_dataset_catalog_search" title="IOGDS Datasets">IOGDS</a> datasets from this nation</h2>
+    <ul>
+    {% for row in models.z_datasets %}
+        <li><a href="{{row.dataset.value}}">{{row.title.value}}</a></td>
+    {% endfor %}
+    </ul>
+
     </div>    
     
   </body>
