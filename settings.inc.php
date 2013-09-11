@@ -17,7 +17,7 @@ $conf['ns']['local_counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/datas
 $conf['ns']['local']   = 'http://logd.tw.rpi.edu/';
 $conf['ns']['base']   = 'http://logd.tw.rpi.edu/'; //previously http://logd.tw.rpi.edu/ih2, stopped working after google maps update
 
-$conf['mirror_external_uris'] = true; //needs to be true
+$conf['mirror_external_uris'] = true; //this needs to be true
 
 // Cherry-picked components (see https://github.com/alangrafu/lodspeakr/wiki/Reuse-cherry-picked-components-from-other-repositories)
 
