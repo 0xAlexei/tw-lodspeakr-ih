@@ -1,6 +1,6 @@
 {%include "../../includes/header.inc"%}
     <div class="container-fluid">
-    <h1>Default view1</h1>
+    <h1>Default TEST</h1>
 
     <table class="table table-striped" about="{{uri}}">
     <thead>
