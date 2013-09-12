@@ -42,7 +42,7 @@
     <tr>
         <td></td>
         <td><a href='{{lodspk.ns.foaf}}depiction'>foaf:depiction</a></td>
-        <td><img alt="{{first.name.name.value}} logo" class="logo" src="{{first.dbpedia.logodescription.pic.value}}"/></td>
+        <td><img alt="{{first.name.name.value}} logo" class="depiction" src="{{first.dbpedia.logodescription.pic.value}}"/></td>
     </tr>
     {% endif %}
 
