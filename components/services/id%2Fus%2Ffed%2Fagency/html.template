@@ -12,6 +12,12 @@
 	    	<li><a href="{{i.crop.value}}">{{i.name.value | capfirst}}</a></li>
 	    	{% endfor %}
 	    </ul>
+		<h2><a href="{{lodspk.home}}id/us/fed/agency/Environmental_Protection_Agency/chemical/">EPA Toxic Chemicals</a></h2>
+	  	<ul>
+		    {% for i in models.chemicals %}
+		   	<li><a href="{{i.chemical.value}}">{{i.name.value | lower | capfirst}}</a></li>
+			{% endfor %}
+		</ul>
       </ul>
     </div>
   </body>
