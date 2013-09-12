@@ -1,0 +1,6 @@
+SELECT * WHERE{
+        OPTIONAL{ <{{first.sameas.dbpediaUri.value}}> 	dbpedia-owl:abstract ?abstract. }
+	OPTIONAL{ <{{first.sameas.dbpediaUri.value}}>	owl:sameAs ?link .}
+ 	OPTIONAL{ <{{first.sameas.dbpediaUri.value}}>	foaf:depiction ?pic .}
+	FILTER( lang(?abstract) = "en" )  
+}

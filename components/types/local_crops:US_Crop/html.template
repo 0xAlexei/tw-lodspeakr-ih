@@ -38,18 +38,21 @@
     </tr>
     {% endif %}
 
-
+    {% if first.dbpedia.logodescription.pic.uri %}
     <tr>
         <td></td>
         <td><a href='{{lodspk.ns.foaf}}depiction'>foaf:depiction</a></td>
         <td><img alt="{{first.name.name.value}} logo" class="logo" src="{{first.dbpedia.logodescription.pic.value}}"/></td>
     </tr>
+    {% endif %}
 
+    {% if first.dbpedia.logodescription.abstract.literal %}
     <tr>
         <td></td>
         <td><a href='{{lodspk.ns.dbpediaowl}}abstract'>dbpedia-owl:abstract</a></td>
         <td>{{first.dbpedia.logodescription.abstract.value}}</td>
     </tr>
+    {% endif %}
 
 
     <thead>
