@@ -1,0 +1,6 @@
+SELECT * WHERE{
+	GRAPH <{{lodspk.toxics}}>{
+		?chemical a local_toxics:Chemical.
+		?chemical dcterms:title ?name .
+	}
+} ORDER BY LCASE(?name)
