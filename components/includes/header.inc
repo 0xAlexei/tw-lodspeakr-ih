@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{%if first.name.name.literal%}{{first.name.name.value}} - {%endif%}RPI TWC Instance Hub</title>
+    <title>{%if first.name.name.literal%}{{first.name.name.value | lower | capfirst}} - {%endif%}RPI TWC Instance Hub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
