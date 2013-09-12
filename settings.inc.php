@@ -12,6 +12,7 @@ $conf['ns']['local_states'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset
 $conf['ns']['local_countries'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-countries/vocab/';
 $conf['ns']['local_crops'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-crops/vocab/';
 $conf['ns']['local_counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-counties/vocab/';
+$conf['ns']['local_toxics'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-toxic-chemicals/vocab/';
 //THESE NEED TO BE ABOVE $conf['ns']['local']
 
 $conf['ns']['local']   = 'http://logd.tw.rpi.edu/';
@@ -34,4 +35,6 @@ $lodspk['states'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-
 $lodspk['counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-counties/version/2013-May-01';
 $lodspk['agencies'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-federal-agencies/version/2013-May-09';
 $lodspk['crops'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-crops/version/2013-Sep-04';
+$lodspk['toxics'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-toxic-chemicals/version/2013-Sep-12';
+
 ?>
