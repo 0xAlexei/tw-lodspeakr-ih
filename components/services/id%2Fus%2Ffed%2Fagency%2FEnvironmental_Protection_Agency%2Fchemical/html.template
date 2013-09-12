@@ -1,0 +1,11 @@
+{%include "../../includes/header.inc"%}
+    <div class="container-fluid">
+    <h1>EPA Chemical Instances</h1>
+	<ul>
+    	{% for i in models.chemicals %}
+	   	 <li><a href="{{i.chemical.value}}">{{i.name.value | lower | capfirst}}</a></li>
+		{% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
