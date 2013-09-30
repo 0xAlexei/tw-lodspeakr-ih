@@ -32,7 +32,7 @@ $conf['modules']['available'] = array('static','type','service');
 
 $lodspk['countries'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-countries/version/2013-Sep-04';
 $lodspk['states'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-states-and-territories/version/2011-Oct-09';
-$lodspk['counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-counties/version/2013-May-01';
+$lodspk['counties'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-counties/version/2013-Sep-30';
 $lodspk['agencies'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-federal-agencies/version/2013-Sep-16';
 $lodspk['crops'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-crops/version/2013-Sep-04';
 $lodspk['toxics'] = 'http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/instance-hub-us-toxic-chemicals/version/2013-Sep-12';
